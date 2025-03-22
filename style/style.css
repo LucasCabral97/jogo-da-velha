@@ -1,0 +1,284 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background: rgb(208, 208, 243);
+
+}
+
+/* *************id's*************** */
+
+#game {
+    display: flex;
+    flex-flow: wrap column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 20px;
+    border: 5px solid blue;
+    margin: 20px auto 15px auto;
+    width: 700px;
+    height: 500px;
+    background: white;
+}
+
+#infoJogo {
+    flex: 15%;
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: center;
+
+    border-radius: 20px;
+    border: 2px solid blue;
+    margin: 5px;
+    width: 95%
+}
+
+#player1,
+#player2 {
+    flex: 40%;
+}
+
+#comandosJogos {
+    display: flex;
+    flex-flow: wrap column;
+    justify-content: center;
+    align-items: center;
+    flex: 20%;
+}
+
+#placarplayer1,
+#placarplayer2 {
+    font-weight: bold;
+    font-size: 40px;
+}
+
+
+#tabuleiro {
+    flex: 60%;
+
+    padding: 5px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 120px);
+    grid-template-rows: repeat(3, 120px);
+
+    border-radius: 20px;
+    margin-bottom: 5px;
+    border: 2px solid blue;
+    width: 95%
+}
+
+#tabuleiro div {
+    display: flex;
+    font-size: 100px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px
+}
+
+#tb0,
+#tb1,
+#tb3,
+#tb4 {
+    border-bottom: 10px ridge rgb(208, 208, 243);
+    border-right: 10px ridge rgb(208, 208, 243);
+}
+
+#tb2,
+#tb5 {
+    border-bottom: 10px ridge rgb(208, 208, 243);
+}
+
+#tb6,
+#tb7 {
+    border-right: 10px ridge rgb(208, 208, 243);
+}
+
+#exe {
+    position: fixed;
+    margin-top: 38%;
+    margin-left: 75%;
+    opacity: 0.5;
+}
+
+#dificultGame {
+    text-align: center;
+    margin: 5px;
+}
+
+
+/* **********classes************** */
+
+.button {
+    background: rgb(208, 208, 243);
+    color: blue;
+    font-weight: bold;
+    border: 3px solid blue;
+    border-radius: 20px;
+    width: 120px;
+    height: 40px;
+}
+
+.button:hover {
+    background: blue;
+    color: rgb(208, 208, 243);
+    font-weight: bold;
+    border: 3px solid rgb(208, 208, 243);
+}
+
+.placar {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.selectionPlayer {
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: underline;
+    padding: 2px;
+    border-radius: 10px;
+    color: rgb(1, 255, 1);
+    font-size: 15px;
+    transition: 0.5s;
+}
+
+.noselectionPlayer {
+    padding: 3px;
+    border-radius: 10px;
+    font-size: 15px;
+    transition: 0.5s;
+}
+
+.marcarX {
+    color: green;
+    background: rgb(161, 236, 161);
+    transition: 1s;
+    pointer-events: none;
+    transition: 1s;
+}
+
+.marcarO {
+    color: red;
+    background: rgb(243, 177, 177);
+    transition: 0.5s;
+    pointer-events: none;
+    transition: 1s;
+}
+
+.ganhou {
+    color: rgb(219, 186, 0);
+    background: rgb(250, 250, 201);
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.modal {
+    color: blue;
+    display: block;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0, 0.4);
+}
+
+.modal .content {
+
+    background-color: #d3d3d3;
+    margin: 3% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    height: 500px;
+    border: 5px solid blue;
+    border-radius: 20px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.modal .content .button {
+    margin-top: 10px;
+}
+
+.selectionGame {
+    flex: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input {
+    color: blue;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 10px;
+    border: 2px solid blue;
+}
+
+.habilitado {
+    pointer-events: all;
+    opacity: 1.0;
+}
+
+.desabilitado {
+    pointer-events: none;
+    opacity: 0.3;
+}
+
+
+/* ***********responsivo************ */
+
+@media only screen and (max-width:768px) {
+    #game {
+        width: 350px;
+        height: 600px;
+    }
+
+    #infoJogo {
+        width: 330px;
+    }
+
+    .button {
+        width: 65px;
+        height: 65px;
+    }
+
+    #tabuleiro {
+        padding: 10%;
+        grid-template-columns: repeat(3, 100px);
+        grid-template-rows: repeat(3, 100px);
+    }
+
+    #exe {
+        display: none;
+    }
+
+
+    .modal .content {
+        width: 80%;
+        margin: 15% auto;
+        height: 400px;
+    }
+
+    .modal .content .button {
+        margin-top: 10px;
+        width: 80px;
+        height: 50px;
+    }
+
+}

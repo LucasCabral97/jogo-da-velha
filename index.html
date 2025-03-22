@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex49</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <div class="modal">
+        <div class="content">
+            <div style="flex: 10%;">
+                <h2>Bem vindo ao Jogo da Velha</h2>
+            </div>
+            <div class="selectionGame">
+                <div class="modoGame">
+                    <p>Selecione o modo de jogo:</p>
+                    <br>
+                    <input type="radio" name="selectionStyle" id="twoPlayers" onclick="modoGame('two')">
+                    <label for="twoPlayers">Dois
+                        jogadores</label><br><br>
+                    <input type="radio" name="selectionStyle" id="modopc" onclick="modoGame('pc')">
+                    <label for="modopc">Contra a "maquina"</label>
+                    <br><br>
+                </div>
+
+                <select id="dificultGame" class="input desabilitado">
+
+                    <option value="" selected disabled>Selecione a dificultade</option>
+                    <option value="Facil">Fácil</option>
+                    <option value="Medio">Médio</option>
+                    <option value="Dificil">Difícil</option>
+
+                </select>
+
+                <input id="insertNamePlayer1" type="text" placeholder="Insira o nome do Player1"
+                    class="input desabilitado" maxlength="10">
+                <input id="insertNamePlayer2" type="text" placeholder="Insira o nome do Player2"
+                    class="input desabilitado" maxlength="10">
+
+                <button id="btnplay" onclick="jogar()" class="button">Jogar</button>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="game">
+        <div id="infoJogo">
+
+            <div id="player1" class="placar">
+                <h3>Placar</h3>
+                <p id="placarplayer1">0</p>
+                <p id="nameplayer1">Jogador 1</p>
+            </div>
+
+            <div id="comandosJogos">
+                <button onclick="reiniciarJogo(1)" class="button">Reiniciar Jogo</button>
+            </div>
+
+            <div id="player2" class="placar">
+                <h3>Placar</h3>
+                <p id="placarplayer2">0</p>
+                <p id="nameplayer2" class="noselectionPlayer">Jogador 2</p>
+            </div>
+
+        </div>
+
+        <div id="tabuleiro">
+            <div id="tb0" onclick="marcar(0)"></div>
+            <div id="tb1" onclick="marcar(1)"></div>
+            <div id="tb2" onclick="marcar(2)"></div>
+            <div id="tb3" onclick="marcar(3)"></div>
+            <div id="tb4" onclick="marcar(4)"></div>
+            <div id="tb5" onclick="marcar(5)"></div>
+            <div id="tb6" onclick="marcar(6)"></div>
+            <div id="tb7" onclick="marcar(7)"></div>
+            <div id="tb8" onclick="marcar(8)"></div>
+
+        </div>
+
+    </div>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>
