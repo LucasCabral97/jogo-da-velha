@@ -13,3 +13,4 @@ Jogo da Velha com a possibilidade de jogar um contra um ou contra o PC (três ni
 
 ## Como Jogar
 1. Abra o arquivo `index.html` em um navegador.
+2. Ou acesse o link https://lucascabral97.github.io/jogo-da-velha/
